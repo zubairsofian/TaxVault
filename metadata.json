@@ -1,0 +1,8 @@
+{
+  "name": "TaxVault",
+  "description": "Pengjejak resit perbelanjaan dengan Google Sheets",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
