@@ -6,10 +6,11 @@ import Dashboard from './components/Dashboard';
 import AddReceipt from './components/AddReceipt';
 import History from './components/History';
 import Charts from './components/Charts';
+import Simulation from './components/Simulation';
 import SettingsModal from './components/SettingsModal';
 import { AnimatePresence, motion } from 'motion/react';
 
-export type TabType = 'dashboard' | 'add' | 'history' | 'chart';
+export type TabType = 'dashboard' | 'add' | 'history' | 'chart' | 'simulation';
 
 export default function App() {
   const [receipts, setReceipts] = useState<Receipt[]>([]);
@@ -73,6 +74,7 @@ export default function App() {
             >
               {activeTab === 'dashboard' && <Dashboard receipts={receipts} />}
               {activeTab === 'chart' && <Charts receipts={receipts} />}
+              {activeTab === 'simulation' && <Simulation receipts={receipts} />}
               {activeTab === 'add' && <AddReceipt onAdd={handleAdd} />}
               {activeTab === 'history' && <History receipts={receipts} onUpdate={handleUpdate} onDelete={handleDelete} />}
             </motion.div>

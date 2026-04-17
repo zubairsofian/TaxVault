@@ -17,10 +17,10 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
         <Plus size={32} strokeWidth={3} />
       </button>
 
-      <nav className="absolute bottom-[30px] left-0 w-full bg-[#050505]/95 backdrop-blur-md grid grid-cols-3 border-t border-[#222] z-40">
+      <nav className="absolute bottom-[30px] left-0 w-full bg-[#050505]/95 backdrop-blur-md grid grid-cols-4 border-t border-[#222] z-40">
         <button 
           onClick={() => setActiveTab('dashboard')} 
-          className={`py-6 text-center text-[0.7rem] font-extrabold uppercase tracking-[2px] transition ${
+          className={`py-5 text-center text-[0.65rem] md:text-[0.7rem] font-extrabold uppercase tracking-[1px] md:tracking-[2px] transition ${
             activeTab === 'dashboard' ? 'text-[#00FF5F] border-t-2 border-[#00FF5F]' : 'text-[#888888] border-t-2 border-transparent hover:text-white'
           }`}
         >
@@ -28,7 +28,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
         </button>
         <button 
           onClick={() => setActiveTab('history')} 
-          className={`py-6 text-center text-[0.7rem] font-extrabold uppercase tracking-[2px] transition ${
+          className={`py-5 text-center text-[0.65rem] md:text-[0.7rem] font-extrabold uppercase tracking-[1px] md:tracking-[2px] transition ${
             activeTab === 'history' ? 'text-[#00FF5F] border-t-2 border-[#00FF5F]' : 'text-[#888888] border-t-2 border-transparent hover:text-white'
           }`}
         >
@@ -36,11 +36,19 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
         </button>
         <button 
           onClick={() => setActiveTab('chart')} 
-          className={`py-6 text-center text-[0.7rem] font-extrabold uppercase tracking-[2px] transition ${
+          className={`py-5 text-center text-[0.65rem] md:text-[0.7rem] font-extrabold uppercase tracking-[1px] md:tracking-[2px] transition ${
             activeTab === 'chart' ? 'text-[#00FF5F] border-t-2 border-[#00FF5F]' : 'text-[#888888] border-t-2 border-transparent hover:text-white'
           }`}
         >
           Analisis
+        </button>
+        <button 
+          onClick={() => setActiveTab('simulation')} 
+          className={`py-5 text-center text-[0.65rem] md:text-[0.7rem] font-extrabold uppercase tracking-[1px] md:tracking-[2px] transition ${
+            activeTab === 'simulation' ? 'text-[#00FF5F] border-t-2 border-[#00FF5F]' : 'text-[#888888] border-t-2 border-transparent hover:text-white'
+          }`}
+        >
+          Simulasi
         </button>
       </nav>
     </>
