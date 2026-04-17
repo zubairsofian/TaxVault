@@ -12,12 +12,12 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
     <>
       <button 
         onClick={() => setActiveTab('add')} 
-        className="absolute right-6 md:right-10 bottom-[100px] w-16 h-16 bg-[#00FF5F] rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(0,255,95,0.3)] hover:scale-105 transition z-50 focus:outline-none"
+        className="absolute right-6 md:right-10 bottom-[120px] w-16 h-16 bg-[#00FF5F] rounded-full flex items-center justify-center text-black shadow-[0_0_20px_rgba(0,255,95,0.3)] hover:scale-105 transition z-50 focus:outline-none"
       >
         <Plus size={32} strokeWidth={3} />
       </button>
 
-      <nav className="absolute bottom-0 left-0 w-full bg-[#050505]/95 backdrop-blur-md grid grid-cols-2 border-t border-[#222] z-40">
+      <nav className="absolute bottom-[30px] left-0 w-full bg-[#050505]/95 backdrop-blur-md grid grid-cols-3 border-t border-[#222] z-40">
         <button 
           onClick={() => setActiveTab('dashboard')} 
           className={`py-6 text-center text-[0.7rem] font-extrabold uppercase tracking-[2px] transition ${
@@ -33,6 +33,14 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
           }`}
         >
           Sejarah
+        </button>
+        <button 
+          onClick={() => setActiveTab('chart')} 
+          className={`py-6 text-center text-[0.7rem] font-extrabold uppercase tracking-[2px] transition ${
+            activeTab === 'chart' ? 'text-[#00FF5F] border-t-2 border-[#00FF5F]' : 'text-[#888888] border-t-2 border-transparent hover:text-white'
+          }`}
+        >
+          Analisis
         </button>
       </nav>
     </>
